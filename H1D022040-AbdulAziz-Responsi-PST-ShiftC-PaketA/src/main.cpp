@@ -2,8 +2,8 @@
 
 int echoPin = D0;
 int trigPin = D1;
-int LED1 = D3;
-int LED2 = D5;
+int LED1 = D3; //LED Merah sebagai tanda peringatan
+int LED2 = D5; //LED Hijau sebagai tanda aman
 
 long duration;
 int distance;
@@ -34,10 +34,10 @@ void loop() {
 
   if (distance<=10)
   {
-    digitalWrite(LED1,HIGH);
+    digitalWrite(LED1,HIGH); //LED Merah menyala
   } else if (distance >10)
   {
-    digitalWrite(LED2,HIGH);
+    digitalWrite(LED2,HIGH); //LED Hijau menyala
   }
   
   delay(1000);
